@@ -6,259 +6,197 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.calc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    // creating variables for our text view and buttons.
-    lateinit var tvsec: TextView
-    lateinit var tvMain: TextView
-    lateinit var bac: Button
-    lateinit var bc: Button
-    lateinit var bbrac1: Button
-    lateinit var bbrac2: Button
-    lateinit var bsin: Button
-    lateinit var bcos: Button
-    lateinit var btan: Button
-    lateinit var blog: Button
-    lateinit var bln: Button
-    lateinit var bfact: Button
-    lateinit var bsquare: Button
-    lateinit var bsqrt: Button
-    lateinit var binv: Button
-    lateinit var b0: Button
-    lateinit var b9: Button
-    lateinit var b8: Button
-    lateinit var b7: Button
-    lateinit var b6: Button
-    lateinit var b5: Button
-    lateinit var b4: Button
-    lateinit var b3: Button
-    lateinit var b2: Button
-    lateinit var b1: Button
-    lateinit var bpi: Button
-    lateinit var bmul: Button
-    lateinit var bminus: Button
-    lateinit var bplus: Button
-    lateinit var bequal: Button
-    lateinit var bdot: Button
-    lateinit var bdiv: Button
-    @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
+    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
+        // initializing our variable for binding.
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+
+
         super.onCreate(savedInstanceState)
-        // on below line we are setting
-        // our content view to our main activity.
-        setContentView(R.layout.activity_main)
-        tvsec = findViewById(R.id.idTVSecondary)
-        tvMain = findViewById(R.id.idTVprimary)
-        bac = findViewById(R.id.bac)
-        bc = findViewById(R.id.bc)
-        bbrac1 = findViewById(R.id.bbrac1)
-        bbrac2 = findViewById(R.id.bbrac2)
-        bsin = findViewById(R.id.bsin)
-        bcos = findViewById(R.id.bcos)
-        btan = findViewById(R.id.btan)
-        blog = findViewById(R.id.blog)
-        bln = findViewById(R.id.bln)
-        bfact = findViewById(R.id.bfact)
-        bsquare = findViewById(R.id.bsquare)
-        bsqrt = findViewById(R.id.bsqrt)
-        binv = findViewById(R.id.binv)
-        b0 = findViewById(R.id.b0)
-        b9 = findViewById(R.id.b9)
-        b8 = findViewById(R.id.b8)
-        b7 = findViewById(R.id.b7)
-        b6 = findViewById(R.id.b6)
-        b5 = findViewById(R.id.b5)
-        b4 = findViewById(R.id.b4)
-        b3 = findViewById(R.id.b3)
-        b2 = findViewById(R.id.b2)
-        b1 = findViewById(R.id.b1)
-        bpi = findViewById(R.id.bpi)
-        bmul = findViewById(R.id.bmul)
-        bminus = findViewById(R.id.bminus)
-        bplus = findViewById(R.id.bplus)
-        bequal = findViewById(R.id.bequal)
-        bdot = findViewById(R.id.bdot)
-        bdiv = findViewById(R.id.bdiv)
+        setContentView(binding.root)
 
         // change colot of toolbar to background color of black
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.black))
         // adding on click listener to our all buttons.
-        b1.setOnClickListener {
+        binding.b1.setOnClickListener {
             // on below line we are appending
             // the expression to our text view.
-            tvMain.text = (tvMain.text.toString() + "1")
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "1")
         }
-        b2.setOnClickListener {
+        binding.b2.setOnClickListener {
             // on below line we are appending
             // the expression to our text view.
-            tvMain.text = (tvMain.text.toString() + "2")
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "2")
         }
-        b3.setOnClickListener {
+    binding.b3.setOnClickListener {
             // on below line we are appending
             // the expression to our text view.
-            tvMain.text = (tvMain.text.toString() + "3")
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "3")
         }
-        b4.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "4")
+        binding.b4.setOnClickListener {
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString()+ "4")
         }
-        b5.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "5")
+        binding.b5.setOnClickListener {
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "5")
         }
-        b6.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "6")
+        binding.b6.setOnClickListener {
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "6")
         }
-        b7.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "7")
+        binding.b7.setOnClickListener {
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "7")
         }
-        b8.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "8")
+        binding.b8.setOnClickListener {
+            binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "8")
         }
-        b9.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "9")
+    binding.b9.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "9")
         }
-        b0.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "0")
+    binding.b0.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "0")
         }
-        bdot.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + ".")
+    binding. bdot.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + ".")
         }
-        bplus.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "+")
+    binding.bplus.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "+")
         }
-        bdiv.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "/")
+    binding.bdiv.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "/")
         }
-        bbrac1.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "(")
+    binding.bbrac1.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "(")
         }
-        bbrac2.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + ")")
+    binding.bbrac2.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + ")")
         }
-        bpi.setOnClickListener {
+    binding.bpi.setOnClickListener {
             // on clicking on pi button we are adding
             // pi value as 3.142 to our current value.
-            tvMain.text = (tvMain.text.toString() + "3.142")
-            tvsec.text = (bpi.text.toString())
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() +  "3.142")
+        binding.idTVSecondary.text = (binding.bpi.text.toString())
         }
-        bsin.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "sin")
+    binding.bsin.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "sin")
         }
-        bcos.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "cos")
+    binding.bcos.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "cos")
         }
-        btan.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "tan")
+    binding.btan.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "tan")
         }
-        binv.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "^" + "(-1)")
+    binding.binv.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "^" + "(-1)")
         }
-        bln.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "ln")
+    binding.bln.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "ln")
         }
-        blog.setOnClickListener {
-            tvMain.text = (tvMain.text.toString() + "log")
+    binding.blog.setOnClickListener {
+        binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "log")
         }
 
-        bminus.setOnClickListener {
+    binding.bminus.setOnClickListener {
             // on clicking on minus we are checking if
             // the user has already a minus operation on screen.
             // if minus operation is already present
             // then we will not do anything.
-            val str: String = tvMain.text.toString()
+            val str: String = binding.idTVprimary.text.toString()
             if (!str.get(index = str.length - 1).equals("-")) {
-                tvMain.text = (tvMain.text.toString() + "-")
+                binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "-")
             }
         }
-        bmul.setOnClickListener {
+    binding.bmul.setOnClickListener {
             // if mul sign is not present in our
             // text view then only we are adding
             // the multiplication operator to it.
-            val str: String = tvMain.text.toString()
+            val str: String = binding.idTVprimary.text.toString()
             if (!str.get(index = str.length - 1).equals("*")) {
-                tvMain.text = (tvMain.text.toString() + "*")
+                binding.idTVprimary.text = (binding.idTVprimary.text.toString() + "*")
             }
         }
-        bsqrt.setOnClickListener {
-            if (tvMain.text.toString().isEmpty()) {
+    binding.bsqrt.setOnClickListener {
+            if(binding.idTVprimary.text.toString().isEmpty()) {
                 // if the entered number is empty we are displaying an error message.
                 Toast.makeText(this, "Please enter a valid number..", Toast.LENGTH_SHORT).show()
             } else {
-                val str: String = tvMain.text.toString()
+                val str: String = binding.idTVprimary.text.toString()
                 // on below line we are calculation
                 // square root of the given number.
                 val r = Math.sqrt(str.toDouble())
                 // on below line we are converting our double
                 // to string and then setting it to text view.
                 val result = r.toString()
-                tvMain.setText(result)
+                binding.idTVprimary.setText(result)
             }
         }
-        bequal.setOnClickListener {
-            val str: String = tvMain.text.toString()
+    binding.bequal.setOnClickListener {
+            val str: String = binding.idTVprimary.text.toString()
             // on below line we are calling an evaluate
             // method to calculate the value of expressions.
             val result: Double = evaluate(str)
             // on below line we are getting result
             // and setting it to text view.
             val r = result.toString()
-            tvMain.setText(r)
-            tvsec.text = str
+            binding.idTVprimary.setText(r)
+            binding.idTVSecondary.text = str
         }
-        bac.setOnClickListener {
+    binding.bac.setOnClickListener {
             // on clicking on ac button we are clearing
             // our primary and secondary text view.
-            tvMain.setText("")
-            tvsec.setText("")
+        binding.idTVprimary.setText("")
+        binding.idTVSecondary.setText("")
         }
-        bc.setOnClickListener {
+    binding.bc.setOnClickListener {
             // on clicking on c button we are clearing
             // the last character by checking the length.
-            var str: String = tvMain.text.toString()
+            var str: String = binding.idTVprimary.text.toString()
             if (!str.equals("")) {
                 str = str.substring(0, str.length - 1)
-                tvMain.text = str
+                binding.idTVprimary.text = str
             }
         }
-        bsquare.setOnClickListener {
-            if (tvMain.text.toString().isEmpty()) {
+    binding.bsquare.setOnClickListener {
+            if (binding.idTVprimary.text.toString().isEmpty()) {
                 // if the entered number is empty we are displaying an error message.
                 Toast.makeText(this, "Please enter a valid number..", Toast.LENGTH_SHORT).show()
             } else {
                 // on below line we are getting the expression and then calculating the square of the number
-                val d: Double = tvMain.getText().toString().toDouble()
+                val d: Double = binding.idTVprimary.getText().toString().toDouble()
                 // on below line we are calculating the square.
                 val square = d * d
                 // after calculating the square we
                 // are setting it to text view.
-                tvMain.setText(square.toString())
+                binding.idTVprimary.text = square.toString()
                 // on below line we are setting
                 // the d to secondary text view.
-                tvsec.text = "$d²"
+                binding.idTVSecondary.text = "$d²"
             }
         }
-        bfact.setOnClickListener {
-            if (tvMain.text.toString().isEmpty()) {
+    binding.bfact.setOnClickListener {
+            if (binding.idTVprimary.text.toString().isEmpty()) {
                 // if the entered number is empty we are displaying an error message.
                 Toast.makeText(this, "Please enter a valid number..", Toast.LENGTH_SHORT).show()
             } else {
                 // on below line we are getting int value
                 // and calculating the factorial value of the entered number.
-                val value: Int = tvMain.text.toString().toInt()
+                val value: Int = binding.idTVprimary.text.toString().toInt()
                 val fact: Int = factorial(value)
-                tvMain.setText(fact.toString())
-                tvsec.text = "$value`!"
+                binding.idTVprimary.setText(fact.toString())
+                binding.idTVSecondary.text = "$value`!"
             }
 
         }
 
     }
 
-    fun factorial(n: Int): Int {
+    private fun factorial(n: Int): Int {
         // this method is use to find factorial
         return if (n == 1 || n == 0) 1 else n * factorial(n - 1)
     }
 
-    fun evaluate(str: String): Double {
+    private fun evaluate(str: String): Double {
         return object : Any() {
             // on below line we ar creating variable
             // for tracking the position and char pos.
