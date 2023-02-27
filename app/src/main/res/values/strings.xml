@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Calc</string>
+    <string name="number_format">%s%s</string>
+    <string name="square_result">%s%s</string>
+    <string name="factorial_result">%s%s</string>
+
+
+
+
 </resources>
